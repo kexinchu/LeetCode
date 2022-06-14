@@ -17,19 +17,21 @@ k 是一个正整数，它的值小于或等于链表的长度。
 ## 目录结构
 ```
 ├── main.cpp    // 程序入口
-├── include     // 头文件
-│   ├── reverse_kgrooup_list.h
-├── src		// 源文件
-│   ├── reverse_kgrooup_list.cpp
-└── ut		// 单测
-    ├── reverse_kgrooup_list_test.cpp
+├── include		// 头文件
+│   ├── reverse_kgroup_list.h   	// 头文件
+├── src			// 源文件
+│   └── reverse_kgroup_list.cpp		// 源文件
+└── unitest		// 单测
+│	├── case
+│   │ 	├── reverse_kgroup_list_test.cpp
 ```
 
 ## 快速开始
-如何构建、安装、运行
+bcloud build
+./output/bin/chukexin-cpp
 
 ## 测试
-如何执行自动化测试
+./output/test/chukexin-app_test
 
 ## 设计思路
 假设一个链表 l 的长度为n，k个一组翻转链表 原链表: 1 -> 2 -> 3 -> ... -> n-1 -> n，按组划分即： (1, 2, ... k) -> (k+1, k+2, ... 2k) -> ... ( ..., n)，假设一共有m组 翻转后的链表为：(k, ..., 2, 1) -> (2k, ..., k+2, k+1) -> ... ->( ..., n) 翻译成伪代码就是：
@@ -49,5 +51,5 @@ reversekgroup(l, k) {
 │   └── chukexin-cpp
 ├── include
 └── test	// 单测
-    └── chukexin-cpp_test
+│    └── chukexin-cpp_test
 ```

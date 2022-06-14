@@ -1,113 +1,87 @@
-#include "include/reverse_kgroup_list.h"
+#include "reverse_kgroup_list.h"
 
 #include <tuple>
-using namespace std;
 
-// 构造函数
-Node ReverseKGroupList::createNode(int val, Node nextptr = NULL)
+namespace goodcoder
 {
-    ListNode headNode = {data : val, next : nextptr};
-    return &headNode;
-}
-
-// 根据数据构造链表
-Node ReverseKGroupList::createByArray(vector<int> valArr)
-{
-    if (valArr.size() == 0)
+    // 根据数据构造链表
+    Node ReverseKGroupList::createByArray(std::vector<int> valArr)
     {
-        return NULL;
-    }
-    Node head = createNode(valArr[0]);
-    Node tail = head;
-    for (int i = 1; i < valArr.size(); i++)
-    {
-        Node tmp = createNode(valArr[i]);
-        tail->next = tmp;
-        tail = tail->next;
-    }
-    return head;
-}
-
-// 链表打印
-void ReverseKGroupList::print(Node head)
-{
-    if (head == NULL)
-    {
-        cout << "单链表为空" << endl;
-        return;
-    }
-    Node tmp = head;
-    while (tmp != NULL)
-    {
-        cout << tmp->data << "\t";
-        tmp = tmp->next;
-    }
-    cout << endl;
-}
-
-// 翻转一个子链表，并且返回新的头与尾
-pair<Node, Node> ReverseKGroupList::reverse(Node head, Node tail)
-{
-    Node prev = head;
-    Node tmp = head->next;
-    while (tmp != tail->next)
-    {
-        Node rev = tmp->next;
-        tmp->next = prev;
-        prev = tmp;
-        tmp = rev;
-    }
-    return make_pair(tail, head);
-}
-
-Node ReverseKGroupList::reverseKGroup(Node head, int K)
-{
-    Node hair = createNode(0);
-    hair->next = head;
-    Node pre = hair;
-
-    while (head)
-    {
-        Node tail = pre;
-        // 查看剩余部分长度是否大于等于 k
-        for (int i = 0; i < K; ++i)
+        if (valArr.size() == 0)
         {
-            tail = tail->next;
-            if (!tail)
-            {
-                return hair->next;
-            }
+            return NULL;
         }
-        Node nex = tail->next;
-        tie(head, tail) = reverse(head, tail);
-        // 把子链表重新接回原链表
-        pre->next = head;
-        tail->next = nex;
-        pre = tail;
-        head = tail->next;
+        Node head = new ListNode(valArr[0]);
+        Node tail = head;
+        for (int i = 1; i < valArr.size(); i++)
+        {
+            Node tmp = new ListNode(valArr[i]);
+            tail->next = tmp;
+            tail = tail->next;
+        }
+        return head;
     }
 
-    return hair->next;
-}
+    // 链表打印
+    std::string ReverseKGroupList::listToStr(Node head)
+    {
+        if (head == NULL)
+        {
+            return "";
+        }
+        std::string strList = std::to_string(head->data);
+        Node tmp = head->next;
+        while (tmp != NULL)
+        {
+            strList = strList + "->" + std::to_string(tmp->data);
+            tmp = tmp->next;
+        }
+        return strList;
+    }
 
-int main()
-{
-    // 初始化
-    ReverseKGroupList RKGL = ReverseKGroupList();
+    // 翻转一个子链表，并且返回新的头与尾
+    std::pair<Node, Node> ReverseKGroupList::reverse(Node head, Node tail)
+    {
+        Node prev = head;
+        Node tmp = head->next;
+        head->next = NULL; // 避免reverse之后造成：head->next -> head -> head->next  这样的闭环
+        while (prev != tail)
+        {
+            Node rev = tmp->next;
+            tmp->next = prev;
+            prev = tmp;
+            tmp = rev;
+        }
+        return std::make_pair(tail, head);
+    }
 
-    // 单一节点
-    Node testInit = RKGL.createNode(0);
-    cout << testInit->data << endl;
+    // 按 K 分组反转
+    Node ReverseKGroupList::reverseKGroup(Node head, int K)
+    {
+        Node hair = new ListNode(0, head);
+        Node pre = hair;
 
-    // 通过vector生成链表
-    vector<int> testVec(3, 5);
-    Node head = RKGL.createByArray(testVec);
-    cout << head->data << "\t" << head->next->data << endl;
+        while (head)
+        {
+            Node tail = pre;
+            // 查看剩余部分长度是否大于等于 k
+            for (int i = 0; i < K; ++i)
+            {
+                tail = tail->next;
+                if (!tail)
+                {
+                    return hair->next;
+                }
+            }
+            Node nex = tail->next;
+            std::tie(head, tail) = reverse(head, tail);
+            // 把子链表重新接回原链表
+            pre->next = head;
+            tail->next = nex;
+            pre = tail;
+            head = tail->next;
+        }
 
-    // 打印链表
-    RKGL.print(head);
-
-    // 反转K链表
-    // head = 1 -> 2 -> 3 -> 4 -> 5; K=3
-    // out = 3 -> 2 -> 1 -> 4 -> 5
-}
+        return hair->next;
+    }
+} // namespace goodcoder

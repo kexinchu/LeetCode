@@ -1,0 +1,30 @@
+#edit-mode: -*- python -*-
+#coding:utf-8
+
+WORKROOT('../../../')
+
+#platform, if not write PLATFORM('xxx') in BCLOUD file, default is 'centos4u3'
+PLATFORM('centos6u3')
+
+COMPILER('gcc82')
+
+CPPFLAGS('-D_GNU_SOURCE -D__STDC_LIMIT_MACROS -DVERSION=\\\"1.0.0.0\\\"')
+CPPFLAGS('-g -pipe -W -Wall -fPIC')
+CXXFLAGS('-pipe -fsigned-char -Wall -W -g -fPIC  -fpermissive')
+CXXFLAGS('-Wno-unused-local-typedefs -Wno-literal-suffix -Wno-missing-field-initializers -Wno-unused-result -Wno-unused-parameter -Wno-unused-function -Wno-unused-variable -Wno-write-strings -Wno-deprecated')
+
+CONFIGS('third-64/gtest@gtest_1-7-0-100_PD_BL')
+
+#-I path
+INCPATHS("$OUT_ROOT/baidu/goodcoder/chukexin-cpp/ ./include . ../ ../../ ../../../")
+
+#link flags
+LDFLAGS('-pthread -lcrypto -lrt')
+
+user_sources=GLOB("src/*.cpp")
+
+Application('chukexin-cpp', Sources(user_sources, 'main.cpp'), 'include/*h')
+
+#UT
+UTApplication('chukexin-cpp_test', Sources(user_sources, 'unitest/case/reverse_kgroup_list_test.cpp'), 'include/*h')
+

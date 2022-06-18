@@ -1,7 +1,7 @@
 # 记录刷题学习
 
 ## 剑指Offer
-- 
+- [代码](https://github.com/kexinchu/LeetCode/tree/master/the_sword_refers_to_the_offer)
 ### 栈与队列
 - [x] 09，用两个栈实现队列  
 - [x] 30，包含min函数的栈  
@@ -87,8 +87,8 @@
 ### 数学
 - [x] 39，数组中出现次数超过一半的数字
 - [x] 66，构建乘积数组
-- [x] 14，14-II，剪绳子
-- [ ] 57-II，和为s的连续正数序列
+- [x] [14，14-II，剪绳子](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/math-14.cpp)
+- [ ] [57-II，和为s的连续正数序列](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/math-57-II.cpp)
 - [ ] 62，圆圈中最后剩下的数字
 - [ ] 43，1 ~ n 整数中1出现的次数
 - [ ] 44，数字序列中某一位的数字
@@ -100,4 +100,4 @@
 
 ## 百度C++ GoodCoder考试
 - 选择 **固定题目二**【用C/C++实现】K 个一组翻转链表
-- reverse-k-group-link-list
+- [代码](https://github.com/kexinchu/LeetCode/tree/master/reverse-k-group-link-list)

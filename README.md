@@ -3,7 +3,7 @@
 ## 剑指Offer
 - [代码](https://github.com/kexinchu/LeetCode/tree/master/the_sword_refers_to_the_offer)
 ### 栈与队列
-- [x] [09，用两个栈实现队列]((https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/stack_and_queue-09.cpp))
+- [x] [09，用两个栈实现队列](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/stack_and_queue-09.cpp)
 - [x] 30，包含min函数的栈  
 - [x] 59-I，滑动窗口的最大值  
 - [x] 59-II，队列的最大值  
@@ -42,7 +42,7 @@
 - [x] 64，求1+2+3+… +n
 - [x] 68-I  二叉搜索数的最近祖先
 - [x] 68-II 二叉树的最近公共祖先
-- [ ] 37，序列化二叉树
+- [x] [37，序列化二叉树](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/reback-37.cpp)
 - [ ] 38，字符串的排列
 
 ### 分治算法

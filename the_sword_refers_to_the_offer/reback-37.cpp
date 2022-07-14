@@ -119,16 +119,29 @@ public:
     {
         string temp = "";
         vector<string> result;
-        for (char c : s) // C++ 11 支持
+        // C++ 11 支持
+        // for (char c : s)
+        // {
+        //     if (c == ',')
+        //     {
+        //         result.push_back(temp);
+        //         temp = "";
+        //     }
+        //     else
+        //     {
+        //         temp += c;
+        //     }
+        // }
+        for (int i = 0; i < s.size(); ++i)
         {
-            if (c == ',')
+            if (',' == s[i])
             {
                 result.push_back(temp);
                 temp = "";
             }
             else
             {
-                temp += c;
+                temp += s[i];
             }
         }
         result.push_back(temp);

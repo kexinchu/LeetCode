@@ -43,7 +43,10 @@
 - [x] 68-I  二叉搜索数的最近祖先
 - [x] 68-II 二叉树的最近公共祖先
 - [x] [37，序列化二叉树](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/reback-37.cpp)
-- [ ] 38，字符串的排列
+- [x] [38，字符串的排列](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/reback-38.cpp)
+   - [ ] [C++ String](https://cplusplus.com/reference/string/string/?kw=string)
+      - push_back()
+      - pop_back()
 
 ### 分治算法
 - [x] 07，重建二叉树

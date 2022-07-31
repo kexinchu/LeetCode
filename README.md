@@ -92,7 +92,7 @@
 - [x] 66，构建乘积数组
 - [x] [14，14-II，剪绳子](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/math-14.cpp)
 - [x] [57-II，和为s的连续正数序列](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/math-57-II.cpp)
-- [ ] 62，圆圈中最后剩下的数字
+- [x] [62，圆圈中最后剩下的数字](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/math-62.cpp)
 - [ ] 43，1 ~ n 整数中1出现的次数
 - [ ] 44，数字序列中某一位的数字
 

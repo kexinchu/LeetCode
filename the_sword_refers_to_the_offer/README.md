@@ -1,5 +1,5 @@
 ### 栈与队列
-- [x] [09，用两个栈实现队列](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/stack_and_queue-09.cpp)
+- [x] [09，用两个栈实现队列](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/src_cpp/stack_and_queue-09.cpp)
 - [x] 30，包含min函数的栈  
 - [x] 59-I，滑动窗口的最大值  
 - [x] 59-II，队列的最大值  
@@ -38,8 +38,8 @@
 - [x] 64，求1+2+3+… +n
 - [x] 68-I  二叉搜索数的最近祖先
 - [x] 68-II 二叉树的最近公共祖先
-- [x] [37，序列化二叉树](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/reback-37.cpp)
-- [x] [38，字符串的排列](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/reback-38.cpp)
+- [x] [37，序列化二叉树](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/src_cpp/reback-37.cpp)
+- [x] [38，字符串的排列](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/src_cpp/reback-38.cpp)
    - [ ] [C++ String](https://cplusplus.com/reference/string/string/?kw=string)
       - push_back()
       - pop_back()
@@ -100,7 +100,7 @@
 
       返回值:  dp 矩阵右下角字符, 代表字符串 s 和 p 能否匹配
       ```
-- [ ] 49，丑数
+- [ ] [49，丑数]((https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/src_cpp/dynamic-49.cpp))
 - [ ] 60，n个骰子的点数
 
 ### 双指针
@@ -127,9 +127,9 @@
 ### 数学
 - [x] 39，数组中出现次数超过一半的数字
 - [x] 66，构建乘积数组
-- [x] [14，14-II，剪绳子](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/math-14.cpp)
-- [x] [57-II，和为s的连续正数序列](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/math-57-II.cpp)
-- [x] [62，圆圈中最后剩下的数字](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/math-62.cpp)
+- [x] [14，14-II，剪绳子](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/src_cpp/math-14.cpp)
+- [x] [57-II，和为s的连续正数序列](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/src_cpp/math-57-II.cpp)
+- [x] [62，圆圈中最后剩下的数字](https://github.com/kexinchu/LeetCode/blob/master/the_sword_refers_to_the_offer/src_cpp/math-62.cpp)
 - [ ] 43，1 ~ n 整数中1出现的次数
 - [ ] 44，数字序列中某一位的数字
 

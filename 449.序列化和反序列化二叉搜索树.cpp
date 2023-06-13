@@ -5,15 +5,24 @@
  */
 
 // @lc code=start
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
+// #include <iostream>
+// #include <vector>
+// #include <queue>
+// using namespace std;
+
+// Definition for a binary tree node.
+// struct TreeNode
+// {
+//     int val;
+//     TreeNode *left;
+//     TreeNode *right;
+//     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+// };
+
+/*
+ * Binary Search Tree: the value of left sub tree is always lesser than root value and right sub tree.
  */
+
 class Codec
 {
 private:
@@ -63,7 +72,7 @@ public:
     // Encodes a tree to a single string.
     string serialize(TreeNode *root)
     {
-        // if root is NULL, will run DataArr[endpos] == "null", and then will occur DataArr[-1], Error.
+        // if root is NULL, will run DataArr[endpos] == "null", and then will occur DataArr[-1], Error. so add a judgement
         if (root == NULL)
             return "[]";
         // sequence traversal
@@ -107,6 +116,7 @@ public:
     }
 
     // Decodes your encoded data to tree.
+    // serialize use seqeuence traversal
     TreeNode *deserialize(string data)
     {
         // if '[' 和 ']' in string, delete them
@@ -146,3 +156,22 @@ public:
 // TreeNode* ans = deser->deserialize(tree);
 // return ans;
 // @lc code=end
+
+// int main()
+// {
+//     Codec CD;
+//     TreeNode *root = CD.deserialize("2,1,3");
+//     cout << CD.serialize(root) << endl;
+//     root = CD.deserialize("");
+//     cout << CD.serialize(root) << endl;
+//     root = CD.deserialize("[]");
+//     cout << CD.serialize(root) << endl;
+//     root = CD.deserialize("4,2,6,1,3,5");
+//     cout << root->left->right->val << endl;
+//     cout << CD.serialize(root) << endl;
+//     root = CD.deserialize("1,null,2");
+//     cout << CD.serialize(root) << endl;
+//     root = CD.deserialize("1,2,3,6,null,4,5,null,null,7");
+//     cout << "is 7 ? : " << root->right->left->left->val << endl;
+//     cout << CD.serialize(root) << endl;
+// }

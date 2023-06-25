@@ -17,7 +17,7 @@
 - [x] 05，替换空格  <字符数组>
 - [x] 58-I. 翻转单词顺序  
 - [x] 58-II，左旋转字符串
-- [x] 20，表示数值的字符串 <有限状态机>
+- [x] 20，表示数值的字符串 [有限状态机](https://github.com/kexinchu/LeetCode/blob/master/sword-to-offer/picture/valid-number.jpg)
 - [x] 67，把字符串转换成正数
 
 ### 查找算法

@@ -3,7 +3,7 @@
  *
  * [572] 另一棵树的子树
  */
-package main
+package leetcode
 
 // @lc code=start
 

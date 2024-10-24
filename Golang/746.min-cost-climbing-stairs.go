@@ -3,7 +3,7 @@
  *
  * [746] 使用最小花费爬楼梯
  */
-package leetcode
+package main
 
 // @lc code=start
 func minCostClimbingStairs(cost []int) int {

@@ -3,7 +3,7 @@
  *
  * [198] 打家劫舍
  */
-package leetcode
+package main
 
 // @lc code=start
 func rob(nums []int) int {

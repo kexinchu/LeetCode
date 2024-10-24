@@ -4,7 +4,7 @@
  * [64] 最小路径和
  */
 
-package leetcode
+package main
 
 // @lc code=start
 func minPathSum(grid [][]int) int {

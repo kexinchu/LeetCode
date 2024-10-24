@@ -4,7 +4,7 @@
  * [322] 零钱兑换
  */
 
-package leetcode
+package main
 
 func coinChange(coins []int, amount int) int {
 	var num_coins int = len(coins)

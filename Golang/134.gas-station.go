@@ -1,4 +1,4 @@
-package leetcode
+package main
 
 func canCompleteCircuit(gas []int, cost []int) int {
 	var roadDis int = len(gas)

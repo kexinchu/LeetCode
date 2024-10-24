@@ -4,7 +4,7 @@
  * [63] 不同路径 II
  */
 
-package leetcode
+package main
 
 // @lc code=start
 func uniquePathsWithObstacles(obstacleGrid [][]int) int {

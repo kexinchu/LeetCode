@@ -4,7 +4,7 @@
  * [62] 不同路径
  */
 
-package leetcode
+package main
 
 // @lc code=start
 func uniquePaths(m int, n int) int {

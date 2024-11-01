@@ -26,11 +26,11 @@ func minCostClimbingStairs(cost []int) int {
 	return tempVec[stepStamp%2]
 }
 
-func min(a, b int) int {
-	if a > b {
-		return b
-	}
-	return a
-}
+//func min(a, b int) int {
+//	if a > b {
+//		return b
+//	}
+//	return a
+//}
 
 // @lc code=end

@@ -20,10 +20,10 @@ func deleteAndEarn(nums []int) int {
 		sum_nums[val] += val
 	}
 
-	return rob(sum_nums)
+	return rob_740(sum_nums)
 }
 
-func rob(nums []int) int {
+func rob_740(nums []int) int {
 	first, second := nums[0], max(nums[0], nums[1])
 	for idx := 2; idx < len(nums); idx += 1 {
 		first, second = second, max(first+nums[idx], second)
@@ -31,11 +31,11 @@ func rob(nums []int) int {
 	return second
 }
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
+//func max(a, b int) int {
+//	if a > b {
+//		return a
+//	}
+//	return b
+//}
 
 // @lc code=end

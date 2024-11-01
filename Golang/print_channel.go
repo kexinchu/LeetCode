@@ -44,7 +44,7 @@ func printB(chA, chB chan bool, wg *sync.WaitGroup) {
 	}
 }
 
-func main() {
+func test_print_channel() {
 
 	var wg sync.WaitGroup
 

@@ -52,5 +52,13 @@ func levelOrder(root *TreeNode) [][]int {
 		}
 		result = append(result, tmp_res)
 	}
+
+	// for 107.binary-tree-level-order-traversal-ii; need return result from leaf to root
+	// second step: reverse the order
+	// res_len := len(result)
+	// for i := 0; i < res_len/2; i++ {
+	//	  result[i], result[res_len-1-i] = result[res_len-1-i], result[i]
+	// }
+
 	return result
 }
